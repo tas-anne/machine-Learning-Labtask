@@ -1,0 +1,36 @@
+Lab 2:
+we fit a model 
+optimized value of weights and biases
+
+constructor name init_(initializd attribute)
+X feature
+Y output values
+Y=wx+b
+
+num of column and row =n_sample ,n_feature
+
+from loss ->extract graditent
+X.T ->transposem of X 
+1/sample for averaging the data
+
+#class:
+ for i in range(self.n_iters):
+        y_predicted = np.dot(X, self.weights) + self.bias
+        #calculating graditent 
+        dw = (1/n_samples) * np.dot(X.T, (y_predicted - y))
+        db = (1/n_samples) * np.sum(y_predicted - y)
+
+        self.weights -= self.lr * dw #step size
+        self.bias -= self.lr * db  #learning data
+
+        def predict(self, X):
+        y_predicted = np.dot(X, self.weights) + self.bias
+        return y_predicted 
+
+  random value
+noise: standard deviation of gaussian noise
+polt function for line
+plot a curve for error vs number of iterations
+
+mse vs iter 
+
